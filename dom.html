@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - document object model</title>
+</head>
+
+<body>
+
+    <h1>i'm mr. javascript</h1>
+    <a href="#" class="reset">Reset</a></br>
+    <a href="#" id="reset">Reset</a></br>
+    <a href="#" class="javascript">hi javascript how you feeling?</a>
+
+    <script type="text/javascript">
+
+        
+        var a = document.querySelector(".javascript");
+        a.addEventListener('click',function() {
+            // alert("inside the listner!");
+
+            var h1 = document.querySelector("h1");
+            h1.innerHTML = "i'm alive!";
+            console.log(h1);
+        });
+        // using class
+        var b = document.querySelector(".reset");
+        b.addEventListener('click',function(){
+            var h1 = document.querySelector("h1");
+            h1.innerHTML = "i'm mr. javascript"
+            console.log(h1);
+        });
+        // using id
+        var c = document.querySelector("#reset");
+        c.addEventListener('click',function(){
+            var h1 = document.querySelector("h1");
+            h1.innerHTML = "i'm mr. javascript"
+            console.log(h1);
+        });
+
+    </script>
+
+</body>
+
+</html>

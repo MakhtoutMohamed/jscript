@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 1</title>
+</head>
+
+<body>
+    <h1>Hi JavaScript</h1>
+    <a href="#" id="reset">Reset</a><br>
+    <a href="#" id="howare">Hey How are you feeling?</a><br>
+    <a href="#" class="isit">Do you?</a>
+
+    <script type="text/javascript">
+        var a = document.getElementById("reset");
+
+        a.addEventListener('click', function () {
+            var h1 = document.querySelector("h1");
+            h1.innerHTML = "Hi JavaScript";
+            console.log(h1);
+        });
+
+        var b = document.getElementById("howare");
+
+        b.addEventListener('click', function () {
+            var h1 = document.querySelector("h1");
+            h1.innerHTML = "I'm feeling good, Thanks!";
+            console.log(h1);
+        });
+
+        var c = document.getElementsByClassName('isit');
+        c[0].addEventListener('click', function () {
+            var h1 = document.querySelector("h1");
+            h1.innerHTML = "Yes I do!";
+            console.log(h1);
+        });
+
+    </script>
+
+</body>
+
+</html>
